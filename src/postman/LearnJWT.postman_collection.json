@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "4ee80914-7b93-4eae-bb03-7d25fd0d4cb2",
+		"name": "LearnJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34580428"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3NlY3VyZS5nZW51aW5lY29kZXIuY29tIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE3MjQ3NzQ3ODYsImV4cCI6MTcyNDc3NjU4Nn0.ypkc69VnB3FgEv89-vfGz7RnVk_hVPjqGZAomCHfnV676Fkd29fD_dQV4mouKKZrc-2tkFZzAxSX1o3uhycMOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization (Admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3NlY3VyZS5nZW51aW5lY29kZXIuY29tIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE3MjQ3NzQ3ODYsImV4cCI6MTcyNDc3NjU4Nn0.ypkc69VnB3FgEv89-vfGz7RnVk_hVPjqGZAomCHfnV676Fkd29fD_dQV4mouKKZrc-2tkFZzAxSX1o3uhycMOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization (User)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3NlY3VyZS5nZW51aW5lY29kZXIuY29tIiwic3ViIjoiZW1pZ25hcmRpIiwiaWF0IjoxNzI0Nzc1MDE3LCJleHAiOjE3MjQ3NzY4MTd9.F5hV-AsAG2qGjpZ9ZTz8jfYCoBgEnF-DdtTymxAXdw-bvuDMcsV4IwaYHZPnzKBBHN6QXACAXKk8MF1LVi6uOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"home"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
